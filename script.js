@@ -235,7 +235,6 @@ const modal = document.getElementById("modalProjeto");
 const modalTitulo = document.getElementById("modalTitulo");
 const modalDescricao = document.getElementById("modalDescricao");
 const modalData = document.getElementById("modalData");
-const modalVideo = document.getElementById("modalVideo");
 const modalBotoes = document.getElementById("modalBotoes");
 
 const projetos = [
@@ -245,15 +244,14 @@ const projetos = [
     titulo_en: "BitBeak",
     data_pt: "25 de novembro de 2024",
     data_en: "November 25, 2024",
-    descricao_pt: "BitBeak é uma ferramenta gamificada criada para apoiar o ensino de programação. Inspirado em plataformas como o Duolingo, o projeto busca tornar o aprendizado mais leve, acessível e progressivo, especialmente para iniciantes que enfrentam dificuldades nas primeiras disciplinas de programação.<br><br>A plataforma oferece um ambiente interativo onde os usuários podem se cadastrar, fazer login e iniciar uma trilha de aprendizagem dividida em níveis. Cada nível conta com quizzes interativos, desafios para jogar com amigos, e um diferencial visual: mangás educativos que explicam os conceitos de forma contextualizada e envolvente. O sistema de progresso é baseado em experiência e ranking, promovendo engajamento contínuo.<br><br>No backend, foi utilizado C# com .NET e Entity Framework, escolhidos pela robustez, tipagem forte e facilidade de manter regras de negócio complexas com segurança e performance. Já no frontend, o React foi adotado pela sua flexibilidade, componentização e excelente desempenho em interfaces ricas e dinâmicas.",
-    descricao_en: "BitBeak is a gamified tool designed to support programming education. Inspired by platforms like Duolingo, the project aims to make learning more accessible, progressive, and enjoyable—especially for beginners struggling with early programming subjects.<br><br>The platform provides an interactive environment where users can register, log in, and follow a structured learning path divided into levels. Each level features interactive quizzes, friend challenges, and a visual highlight: educational manga that explains programming concepts through engaging storytelling. Progress is based on experience points and ranking, encouraging ongoing engagement.<br><br>The backend was built using C# with .NET and Entity Framework, chosen for their robustness, strong typing, and ability to enforce complex business rules with reliability and performance. On the frontend, React was used for its flexibility, component-based architecture, and high performance in dynamic UIs.",
-    video: "https://www.youtube.com/embed/EVYuPaON3WM",
+    descricao_pt: "BitBeak é uma ferramenta gamificada criada para apoiar o ensino de programação. Inspirado em plataformas como o Duolingo, o projeto busca tornar o aprendizado mais leve, acessível e progressivo, especialmente para iniciantes que enfrentam dificuldades nas primeiras disciplinas de programação.<br><br>A plataforma oferece um ambiente interativo onde os usuários podem se cadastrar, fazer login e iniciar uma trilha de aprendizagem dividida em níveis. Cada nível conta com quizzes interativos, desafios para jogar com amigos, e um diferencial visual: mangás educativos que explicam os conceitos de forma contextualizada e envolvente. O sistema de progresso é baseado em experiência e ranking, promovendo engajamento contínuo.<br><br>No backend, foi utilizado C# com .NET e Entity Framework, escolhidos pela robustez, tipagem forte e facilidade de manter regras de negócio complexas com segurança e performance. Já no frontend, o React foi adotado pela sua flexibilidade, componentização e excelente desempenho em interfaces ricas e dinâmicas.<br><br>O projeto foi apresentado no BES 2025 – Simpósio Brasileiro de Engenharia de Software, parte do CBSoft, o maior congresso brasileiro de software.",
+    descricao_en: "BitBeak is a gamified tool designed to support programming education. Inspired by platforms like Duolingo, the project aims to make learning more accessible, progressive, and enjoyable—especially for beginners struggling with early programming subjects.<br><br>The platform provides an interactive environment where users can register, log in, and follow a structured learning path divided into levels. Each level features interactive quizzes, friend challenges, and a visual highlight: educational manga that explains programming concepts through engaging storytelling. Progress is based on experience points and ranking, encouraging ongoing engagement.<br><br>The backend was built using C# with .NET and Entity Framework, chosen for their robustness, strong typing, and ability to enforce complex business rules with reliability and performance. On the frontend, React was used for its flexibility, component-based architecture, and high performance in dynamic UIs.<br><br>The project was presented at BES 2025 – Brazilian Symposium on Software Engineering, part of CBSoft, Brazil's largest software conference.",
     botoes: [
       { label_pt: "Repositório", label_en: "Repository", url: "https://github.com/orgs/BitBeak/repositories" },
       { label_pt: "Mangás", label_en: "Mangas", href: "assets/Bit_Beak_Mangas.pdf", download: true  },
       { label_pt: "Figma", label_en: "Figma", url: "https://www.figma.com/proto/YJ1eG3DorMAs232tWcoe26/BitBeak?node-id=768-65&p=f&t=GUEUXawIudNkuFAy-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" },
       { label_pt: "Post LinkedIn", label_en: "LinkedIn Post", url: "https://www.linkedin.com/posts/marcosviniciussa_h%C3%A1-cerca-de-um-m%C3%AAs-realizei-a-%C3%BAltima-apresenta%C3%A7%C3%A3o-activity-7275892876104880128-HLgd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-148oBRSguSUWgqHnMYqdzwLz5oxvMhnQ" },
-      { label_pt: "Artigo", label_en: "Paper", tooltip_pt: "O artigo do projeto está em fase de revisão", tooltip_en: "The paper is currently under review" }
+      { label_pt: "Artigo", label_en: "Paper", url: "https://sol.sbc.org.br/index.php/sbes/article/view/37021/36806" }
     ]
   },
   {
@@ -271,17 +269,27 @@ const projetos = [
     ]
   },
   {
-    id: "oasis",
-    titulo_pt: "Oásis Beauty Academy",
-    titulo_en: "Oásis Beauty Academy",
-    data_pt: "01 de julho de 2024",
-    data_en: "July 01, 2024",
-    descricao_pt: "Participei de toda a criação do site institucional do Oásis Beauty Academy. Desde a pesquisa inicial e conversas com a nova proprietária, o projeto foi pensado para dar uma nova identidade ao estúdio, que passava por um processo de transição de gestão. A proposta foi construir algo único, que representasse essa nova fase da empresa.<br><br>Um dos diferenciais do site é a seção “Dia da Noiva”, onde as noivas podem montar sua experiência personalizada, escolhendo serviços como maquiagem, cabelo, estética, nail art e lash design — tudo em um só lugar.<br><br>O site foi desenvolvido com Svelte, uma tecnologia moderna e performática que oferece excelente responsividade e simplicidade no desenvolvimento, ideal para um projeto leve e dinâmico. Também utilizei JavaScript e CSS puro para complementar interações e estilo.",
-    descricao_en: "I was involved in the full development of the institutional website for Oásis Beauty Academy. From early research and client conversations to the final delivery, the project was designed to give the studio a fresh identity, reflecting its transition to new ownership and a unique vision for the future.<br><br>One of the standout features is the “Bride’s Day” section, where brides can personalize their special day by selecting services like makeup, hair, aesthetics, nail art, and lash design — all in one place.<br><br>The site was built using Svelte, a modern and performant framework that provides excellent responsiveness and a smooth development experience — perfect for a lightweight, dynamic site. JavaScript and plain CSS were also used to enhance interactions and styling.",
-    video: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    id: "rsvp",
+    titulo_pt: "RSVP Aniversário",
+    titulo_en: "Birthday RSVP",
+    data_pt: "21 de janeiro de 2026",
+    data_en: "January 21, 2026",
+    descricao_pt: "Sistema simples e divertido de confirmação de presença para festas de aniversário infantil com tema de dinossauros. O projeto foi criado para facilitar o processo de RSVP, permitindo que as famílias confirmem a presença de múltiplos convidados de forma intuitiva, separando automaticamente entre adultos e crianças.<br><br>A aplicação conta com um formulário interativo, design responsivo otimizado para dispositivos móveis, e elementos visuais temáticos como nuvens flutuantes, balões subindo e dinossauros animados que criam uma experiência visual envolvente e lúdica. A integração opcional com Google Sheets permite armazenar e gerenciar os dados dos convidados de forma prática.<br><br>Desenvolvido com HTML5, CSS3 e JavaScript vanilla, o projeto prioriza simplicidade e performance, sem dependências externas. As cores são definidas em variáveis CSS, facilitando a personalização visual. Utilizei Google Fonts para tipografia customizada (Lilita One e Fredoka), trazendo identidade única ao projeto.",
+    descricao_en: "A simple and fun confirmation system for children's birthday parties with a dinosaur theme. The project was created to streamline the RSVP process, allowing families to confirm attendance for multiple guests intuitively, automatically separating adults and children.<br><br>The application features an interactive form, responsive design optimized for mobile devices, and themed visual elements such as floating clouds, rising balloons, and animated dinosaurs that create an engaging and playful visual experience. Optional integration with Google Sheets allows for practical storage and management of guest data.<br><br>Built with HTML5, CSS3, and vanilla JavaScript, the project prioritizes simplicity and performance without external dependencies. Colors are defined using CSS variables, making visual customization easy. I used Google Fonts for custom typography (Lilita One and Fredoka), bringing a unique identity to the project.",
     botoes: [
-      { label_pt: "Site", label_en: "Site", url: "https://oasisbeautyacademy.com/" },
-      { label_pt: "Figma", label_en: "Figma", url: "https://www.figma.com/proto/aRhJufXs2lF4Jp1YrUUP3O/Oasis-Studio?node-id=26-45545&p=f&t=o3MrnQojOrPQvQbq-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=26%3A45545" }
+      { label_pt: "Repositório", label_en: "Repository", url: "https://github.com/marcola20/rsvp-aniversario" }
+    ]
+  },
+  {
+    id: "cbfv",
+    titulo_pt: "CBFV Draft - FC25",
+    titulo_en: "CBFV Draft - FC25",
+    data_pt: "26 de outubro de 2025",
+    data_en: "October 26, 2025",
+    descricao_pt: "Simulador de Draft inspirado no modo Ultimate Team do EA Sports FC 25, desenvolvido para a comunidade brasileira de FIFA/FC. A aplicação permite aos jogadores criar times personalizados através de um sistema de draft interativo e dinâmico.<br><br>O projeto oferece funcionalidades completas de construção de elenco, incluindo seleção de jogadores por posição, visualização de estatísticas detalhadas (ritmo, finalização, passe, drible, defesa e físico), escolha de formações táticas variadas, e um sistema de química para avaliar a sinergia do time. Os usuários podem montar escalações estratégicas, experimentar diferentes combinações de jogadores e formações, além de compartilhar seus drafts com a comunidade.<br><br>Desenvolvido com tecnologias web modernas, o simulador conta com uma interface intuitiva e responsiva, banco de dados atualizado com jogadores do FC25, e sistema de busca e filtros avançados para facilitar a montagem do time ideal. O projeto demonstra habilidades em desenvolvimento frontend, integração de dados e criação de experiências interativas gamificadas.",
+    descricao_en: "Draft Simulator inspired by EA Sports FC 25's Ultimate Team mode, developed for the Brazilian FIFA/FC community. The application allows players to create custom teams through an interactive and dynamic draft system.<br><br>The project offers complete squad building features, including position-based player selection, detailed statistics visualization (pace, shooting, passing, dribbling, defending, and physical), various tactical formation choices, and a chemistry system to evaluate team synergy. Users can build strategic lineups, experiment with different player combinations and formations, and share their drafts with the community.<br><br>Built with modern web technologies, the simulator features an intuitive and responsive interface, an updated database with FC25 players, and advanced search and filter systems to facilitate building the ideal team. The project demonstrates skills in frontend development, data integration, and creating gamified interactive experiences.",
+    botoes: [
+      { label_pt: "Site", label_en: "Site", url: "https://cbfv-app.onrender.com/" }
     ]
   },
   {
@@ -314,7 +322,6 @@ document.querySelectorAll("#projetosWrapper > div").forEach(container => {
     modalTitulo.textContent = idiomaAtual === "pt" ? projeto.titulo_pt : projeto.titulo_en;
     modalDescricao.innerHTML = idiomaAtual === "pt" ? projeto.descricao_pt : projeto.descricao_en;
     modalData.textContent = idiomaAtual === "pt" ? projeto.data_pt : projeto.data_en;
-    modalVideo.src = projeto.video;
     modalBotoes.innerHTML = "";
 
     projeto.botoes.forEach(botao => {
@@ -345,20 +352,17 @@ document.querySelectorAll("#projetosWrapper > div").forEach(container => {
 
 document.getElementById("fecharModal").addEventListener("click", () => {
   modal.classList.add("hidden");
-  modalVideo.src = "";
 });
 
 modal.addEventListener("click", e => {
   if (e.target === modal) {
     modal.classList.add("hidden");
-    modalVideo.src = "";
   }
 });
 
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") {
     modal.classList.add("hidden");
-    modalVideo.src = "";
   }
 });
 
