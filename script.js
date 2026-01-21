@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       angular: `Angular é um framework completo para criação de aplicações SPA com arquitetura baseada em componentes, rotas e serviços.<br><br><strong>Como aplico:</strong> Desenvolvo interfaces ricas e modulares com Angular, utilizando TypeScript, RxJS e boas práticas de escalabilidade.`,
       react: `React é uma biblioteca JavaScript para construção de interfaces reativas e performáticas.<br><br><strong>Utilização:</strong> Crio componentes reutilizáveis e dinâmicos em aplicações com foco em experiência do usuário e integração com APIs externas.`,
       next: `Next.js é um framework para React com renderização híbrida, performance otimizada e excelente suporte a SEO.<br><br><strong>Quando uso:</strong> Para aplicações com foco em tempo de carregamento e visibilidade orgânica, aproveitando recursos como SSR e rotas dinâmicas.`,
-      svelte: `Svelte é um framework reativo que compila o código para JavaScript puro, sem virtual DOM, oferecendo desempenho excepcional.<br><br><strong>Meu interesse:</strong> Tenho estudado Svelte por sua simplicidade e leveza, sendo promissor para projetos modernos e responsivos.`,
+      blazor: `Blazor é um framework da Microsoft para construção de aplicações web interativas usando C# no lugar de JavaScript, permitindo o compartilhamento de código entre cliente e servidor.<br><br><strong>Minha experiência:</strong> Utilizo Blazor para criar interfaces web ricas e dinâmicas aproveitando o ecossistema .NET, facilitando a integração com APIs e lógicas de negócio já implementadas em C#, proporcionando uma experiência de desenvolvimento consistente e produtiva.`,
       legenda: `Passe o mouse sobre os cards para saber mais.`,
       nav: ["Home", "Conhecimentos", "Projetos", "Experiência"],
       conhecimentosTitulo: "CONHECIMENTOS",
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       angular: `Angular is a complete framework for building SPAs with a component-based and service-oriented architecture.<br><br><strong>How I use it:</strong> I create rich, modular UIs using TypeScript, RxJS, and scalable design patterns.`,
       react: `React is a JavaScript library for building reactive and high-performance user interfaces.<br><br><strong>How I apply it:</strong> I create reusable and dynamic components with great user experience and API integration.`,
       next: `Next.js is a React framework with hybrid rendering, optimized performance, and excellent SEO support.<br><br><strong>Use cases:</strong> I build fast-loading apps with dynamic routing and server-side rendering for organic visibility.`,
-      svelte: `Svelte is a reactive framework that compiles down to pure JavaScript, offering exceptional performance without a virtual DOM.<br><br><strong>Why I like it:</strong> I study Svelte for its simplicity and lightweight nature, ideal for modern responsive projects.`,
+      blazor: `Blazor is a Microsoft framework for building interactive web applications using C# instead of JavaScript, enabling code sharing between client and server.<br><br><strong>My experience:</strong> I use Blazor to create rich and dynamic web interfaces leveraging the .NET ecosystem, facilitating integration with APIs and business logic already implemented in C#, providing a consistent and productive development experience.`,
       legenda: `Hover over the cards to learn more.`,
       nav: ["Home", "Skills", "Projects", "Experience"],
       conhecimentosTitulo: "SKILLS",
@@ -226,7 +226,19 @@ document.getElementById("nextProjeto").addEventListener("click", () => {
     setTimeout(() => {
       slideIndex = cardsPorTela;
       updateSlider(false);
-    }, 500); 
+    }, 500);
+  }
+});
+
+document.getElementById("prevProjeto").addEventListener("click", () => {
+  slideIndex--;
+  updateSlider();
+
+  if (slideIndex < cardsPorTela) {
+    setTimeout(() => {
+      slideIndex = totalCards - cardsPorTela - 1;
+      updateSlider(false);
+    }, 500);
   }
 });
 
