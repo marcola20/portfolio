@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       angular: `Angular é um framework completo para criação de aplicações SPA com arquitetura baseada em componentes, rotas e serviços.<br><br><strong>Como aplico:</strong> Desenvolvo interfaces ricas e modulares com Angular, utilizando TypeScript, RxJS e boas práticas de escalabilidade.`,
       react: `React é uma biblioteca JavaScript para construção de interfaces reativas e performáticas.<br><br><strong>Utilização:</strong> Crio componentes reutilizáveis e dinâmicos em aplicações com foco em experiência do usuário e integração com APIs externas.`,
       next: `Next.js é um framework para React com renderização híbrida, performance otimizada e excelente suporte a SEO.<br><br><strong>Quando uso:</strong> Para aplicações com foco em tempo de carregamento e visibilidade orgânica, aproveitando recursos como SSR e rotas dinâmicas.`,
-      svelte: `Svelte é um framework reativo que compila o código para JavaScript puro, sem virtual DOM, oferecendo desempenho excepcional.<br><br><strong>Meu interesse:</strong> Tenho estudado Svelte por sua simplicidade e leveza, sendo promissor para projetos modernos e responsivos.`,
+      blazor: `Blazor é um framework da Microsoft para construção de aplicações web interativas usando C# no lugar de JavaScript, permitindo o compartilhamento de código entre cliente e servidor.<br><br><strong>Minha experiência:</strong> Utilizo Blazor para criar interfaces web ricas e dinâmicas aproveitando o ecossistema .NET, facilitando a integração com APIs e lógicas de negócio já implementadas em C#, proporcionando uma experiência de desenvolvimento consistente e produtiva.`,
       legenda: `Passe o mouse sobre os cards para saber mais.`,
       nav: ["Home", "Conhecimentos", "Projetos", "Experiência"],
       conhecimentosTitulo: "CONHECIMENTOS",
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       angular: `Angular is a complete framework for building SPAs with a component-based and service-oriented architecture.<br><br><strong>How I use it:</strong> I create rich, modular UIs using TypeScript, RxJS, and scalable design patterns.`,
       react: `React is a JavaScript library for building reactive and high-performance user interfaces.<br><br><strong>How I apply it:</strong> I create reusable and dynamic components with great user experience and API integration.`,
       next: `Next.js is a React framework with hybrid rendering, optimized performance, and excellent SEO support.<br><br><strong>Use cases:</strong> I build fast-loading apps with dynamic routing and server-side rendering for organic visibility.`,
-      svelte: `Svelte is a reactive framework that compiles down to pure JavaScript, offering exceptional performance without a virtual DOM.<br><br><strong>Why I like it:</strong> I study Svelte for its simplicity and lightweight nature, ideal for modern responsive projects.`,
+      blazor: `Blazor is a Microsoft framework for building interactive web applications using C# instead of JavaScript, enabling code sharing between client and server.<br><br><strong>My experience:</strong> I use Blazor to create rich and dynamic web interfaces leveraging the .NET ecosystem, facilitating integration with APIs and business logic already implemented in C#, providing a consistent and productive development experience.`,
       legenda: `Hover over the cards to learn more.`,
       nav: ["Home", "Skills", "Projects", "Experience"],
       conhecimentosTitulo: "SKILLS",
@@ -226,7 +226,19 @@ document.getElementById("nextProjeto").addEventListener("click", () => {
     setTimeout(() => {
       slideIndex = cardsPorTela;
       updateSlider(false);
-    }, 500); 
+    }, 500);
+  }
+});
+
+document.getElementById("prevProjeto").addEventListener("click", () => {
+  slideIndex--;
+  updateSlider();
+
+  if (slideIndex < cardsPorTela) {
+    setTimeout(() => {
+      slideIndex = totalCards - cardsPorTela - 1;
+      updateSlider(false);
+    }, 500);
   }
 });
 
@@ -286,8 +298,8 @@ const projetos = [
     titulo_en: "CBFV Draft - FC25",
     data_pt: "26 de outubro de 2025",
     data_en: "October 26, 2025",
-    descricao_pt: "Simulador de Draft inspirado no modo Ultimate Team do EA Sports FC 25, desenvolvido para a comunidade brasileira de FIFA/FC. A aplicação permite aos jogadores criar times personalizados através de um sistema de draft interativo e dinâmico.<br><br>O projeto oferece funcionalidades completas de construção de elenco, incluindo seleção de jogadores por posição, visualização de estatísticas detalhadas (ritmo, finalização, passe, drible, defesa e físico), escolha de formações táticas variadas, e um sistema de química para avaliar a sinergia do time. Os usuários podem montar escalações estratégicas, experimentar diferentes combinações de jogadores e formações, além de compartilhar seus drafts com a comunidade.<br><br>Desenvolvido com tecnologias web modernas, o simulador conta com uma interface intuitiva e responsiva, banco de dados atualizado com jogadores do FC25, e sistema de busca e filtros avançados para facilitar a montagem do time ideal. O projeto demonstra habilidades em desenvolvimento frontend, integração de dados e criação de experiências interativas gamificadas.",
-    descricao_en: "Draft Simulator inspired by EA Sports FC 25's Ultimate Team mode, developed for the Brazilian FIFA/FC community. The application allows players to create custom teams through an interactive and dynamic draft system.<br><br>The project offers complete squad building features, including position-based player selection, detailed statistics visualization (pace, shooting, passing, dribbling, defending, and physical), various tactical formation choices, and a chemistry system to evaluate team synergy. Users can build strategic lineups, experiment with different player combinations and formations, and share their drafts with the community.<br><br>Built with modern web technologies, the simulator features an intuitive and responsive interface, an updated database with FC25 players, and advanced search and filter systems to facilitate building the ideal team. The project demonstrates skills in frontend development, data integration, and creating gamified interactive experiences.",
+    descricao_pt: "Simulador de Draft inspirado no modo Ultimate Team do EA Sports FC 25, desenvolvido para a comunidade brasileira de FIFA/FC. A aplicação permite aos jogadores criar times personalizados através de um sistema de draft interativo e dinâmico.<br><br>O projeto oferece funcionalidades completas de construção de elenco, incluindo seleção de jogadores por posição, visualização de estatísticas detalhadas (ritmo, finalização, passe, drible, defesa e físico), escolha de formações táticas variadas, e um sistema de química para avaliar a sinergia do time. Os usuários podem montar escalações estratégicas, experimentar diferentes combinações de jogadores e formações, além de compartilhar seus drafts com a comunidade.<br><br>Desenvolvido com C# .NET e Blazor WebAssembly, o simulador conta com uma interface intuitiva e responsiva, banco de dados atualizado com jogadores do FC25, e sistema de busca e filtros avançados para facilitar a montagem do time ideal. O projeto demonstra habilidades em desenvolvimento full-stack com .NET, integração de dados e criação de experiências interativas gamificadas.",
+    descricao_en: "Draft Simulator inspired by EA Sports FC 25's Ultimate Team mode, developed for the Brazilian FIFA/FC community. The application allows players to create custom teams through an interactive and dynamic draft system.<br><br>The project offers complete squad building features, including position-based player selection, detailed statistics visualization (pace, shooting, passing, dribbling, defending, and physical), various tactical formation choices, and a chemistry system to evaluate team synergy. Users can build strategic lineups, experiment with different player combinations and formations, and share their drafts with the community.<br><br>Built with C# .NET and Blazor WebAssembly, the simulator features an intuitive and responsive interface, an updated database with FC25 players, and advanced search and filter systems to facilitate building the ideal team. The project demonstrates skills in full-stack .NET development, data integration, and creating gamified interactive experiences.",
     botoes: [
       { label_pt: "Site", label_en: "Site", url: "https://cbfv-app.onrender.com/" }
     ]
