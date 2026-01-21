@@ -234,7 +234,7 @@ document.getElementById("prevProjeto").addEventListener("click", () => {
   slideIndex--;
   updateSlider();
 
-  if (slideIndex < cardsPorTela) {
+  if (slideIndex < 0) {
     setTimeout(() => {
       slideIndex = totalCards - cardsPorTela - 1;
       updateSlider(false);
