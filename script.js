@@ -19,12 +19,25 @@ document.addEventListener("DOMContentLoaded", function () {
       next: `Next.js é um framework para React com renderização híbrida, performance otimizada e excelente suporte a SEO.<br><br><strong>Quando uso:</strong> Para aplicações com foco em tempo de carregamento e visibilidade orgânica, aproveitando recursos como SSR e rotas dinâmicas.`,
       blazor: `Blazor é um framework da Microsoft para construção de aplicações web interativas usando C# no lugar de JavaScript, permitindo o compartilhamento de código entre cliente e servidor.<br><br><strong>Minha experiência:</strong> Utilizo Blazor para criar interfaces web ricas e dinâmicas aproveitando o ecossistema .NET, facilitando a integração com APIs e lógicas de negócio já implementadas em C#, proporcionando uma experiência de desenvolvimento consistente e produtiva.`,
       legenda: `Passe o mouse sobre os cards para saber mais.`,
-      nav: ["Home", "Conhecimentos", "Projetos", "Experiência"],
+      nav: ["Home", "Conhecimentos", "Projetos", "Formação", "Experiência"],
       conhecimentosTitulo: "CONHECIMENTOS",
       heroTexto: `Atuo como desenvolvedor full-stack com foco principal em backend C# e integração de sistemas. No frontend, trabalho com interfaces modernas em WinForms usando DevExpress, além de Angular, React e JavaScript para aplicações web. Tenho experiência em toda a jornada do projeto — da arquitetura à entrega — sempre buscando criar soluções robustas, funcionais e com boa usabilidade.`,
       heroBotaoContato: "Entre em Contato",
       heroBotaoCV: "Download CV",
-      projetosTitulo: "PROJETOS"
+      projetosTitulo: "PROJETOS",
+      formacaoTitulo: "FORMAÇÃO & CERTIFICAÇÕES",
+      academicoDivTitle: "Formação Acadêmica",
+      academicoTitulo: "Bacharelado em Engenharia de Software",
+      academicoData: "Concluído em Fev/2025",
+      academicoDescricao: "Formação completa em Engenharia de Software com ênfase em desenvolvimento de sistemas, arquitetura de software, metodologias ágeis e gestão de projetos. Durante a graduação, desenvolvi projetos práticos aplicando tecnologias modernas e boas práticas de engenharia.",
+      academicoLinkTexto: "Ver post no LinkedIn",
+      certificationsDivTitle: "Certificações e Conquistas",
+      certificacaoTitulo: "Artigo Aceito no SBES 2025 (CBSoft)",
+      certificacaoEmissor: "Sociedade Brasileira de Computação (SBC)",
+      certificacaoData: "Jun 2025",
+      certificacaoDescricao: "Artigo aprovado no XXXIX Simpósio Brasileiro de Engenharia de Software (SBES 2025), principal evento da área no Brasil, parte do CBSoft (Congresso Brasileiro de Software). O trabalho apresenta o BitBeak, uma ferramenta educacional gamificada que usa narrativas em mangá para apoiar o ensino introdutório de programação. A pesquisa envolve o desenvolvimento da plataforma, trilhas de aprendizagem, gamificação e avaliação empírica com estudantes por meio do modelo MEEGA+. A apresentação foi realizada presencialmente em Recife (PE), em setembro de 2025.",
+      certificacaoLinkTexto: "Ver post no LinkedIn",
+      certificacaoArtigoTexto: "Ler artigo completo"
     },
     en: {
       csharp: `C# is a modern, statically-typed, object-oriented language widely used in building robust desktop and backend applications.<br><br><strong>My experience:</strong> I've worked with C# since the beginning of my career, building solid enterprise systems — especially in the financial sector — using layered architecture, SOLID principles, and API integrations. In the BitBeak project, I used Entity Framework for clean and efficient persistence.`,
@@ -40,12 +53,25 @@ document.addEventListener("DOMContentLoaded", function () {
       next: `Next.js is a React framework with hybrid rendering, optimized performance, and excellent SEO support.<br><br><strong>Use cases:</strong> I build fast-loading apps with dynamic routing and server-side rendering for organic visibility.`,
       blazor: `Blazor is a Microsoft framework for building interactive web applications using C# instead of JavaScript, enabling code sharing between client and server.<br><br><strong>My experience:</strong> I use Blazor to create rich and dynamic web interfaces leveraging the .NET ecosystem, facilitating integration with APIs and business logic already implemented in C#, providing a consistent and productive development experience.`,
       legenda: `Hover over the cards to learn more.`,
-      nav: ["Home", "Skills", "Projects", "Experience"],
+      nav: ["Home", "Skills", "Projects", "Education", "Experience"],
       conhecimentosTitulo: "SKILLS",
       heroTexto: `I'm a full-stack developer focused on backend with C# and system integration. On the frontend, I work with modern WinForms (DevExpress), Angular, React and JavaScript. I have experience across the entire project lifecycle — from architecture to delivery — always aiming for robust, functional and user-friendly solutions.`,
       heroBotaoContato: "Contact Me",
       heroBotaoCV: "Download CV",
-      projetosTitulo: "PROJECTS"
+      projetosTitulo: "PROJECTS",
+      formacaoTitulo: "EDUCATION & CERTIFICATIONS",
+      academicoDivTitle: "Academic Background",
+      academicoTitulo: "Bachelor's Degree in Software Engineering",
+      academicoData: "Completed Feb/2025",
+      academicoDescricao: "Complete degree in Software Engineering with emphasis on systems development, software architecture, agile methodologies, and project management. During my undergraduate studies, I developed practical projects applying modern technologies and engineering best practices.",
+      academicoLinkTexto: "View LinkedIn post",
+      certificationsDivTitle: "Certifications & Achievements",
+      certificacaoTitulo: "Paper Accepted at SBES 2025 (CBSoft)",
+      certificacaoEmissor: "Brazilian Computer Society (SBC)",
+      certificacaoData: "Jun 2025",
+      certificacaoDescricao: "Paper accepted at the XXXIX Brazilian Symposium on Software Engineering (SBES 2025), Brazil's leading event in the field, part of CBSoft (Brazilian Congress on Software). The work presents BitBeak, a gamified educational tool that uses manga narratives to support introductory programming education. The research involves platform development, learning paths, gamification, and empirical evaluation with students using the MEEGA+ model. The presentation was held in-person in Recife, Brazil, in September 2025.",
+      certificacaoLinkTexto: "View LinkedIn post",
+      certificacaoArtigoTexto: "Read full paper"
     }
   };
 
@@ -79,7 +105,49 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tituloExp) tituloExp.textContent = lang === "pt" ? "EXPERIÊNCIA" : "EXPERIENCE";
     renderizarExperiencias(lang);
 
+    traduzirFormacao(lang);
     traduzirFooter(lang);
+  }
+
+  function traduzirFormacao(lang) {
+    const formacaoTitulo = document.getElementById("formacaoTitulo");
+    if (formacaoTitulo) formacaoTitulo.textContent = textos[lang].formacaoTitulo;
+
+    const academicoDivTitle = document.getElementById("academicoDivTitle");
+    if (academicoDivTitle) academicoDivTitle.textContent = textos[lang].academicoDivTitle;
+
+    const academicoTitulo = document.getElementById("academicoTitulo");
+    if (academicoTitulo) academicoTitulo.textContent = textos[lang].academicoTitulo;
+
+    const academicoData = document.getElementById("academicoData");
+    if (academicoData) academicoData.textContent = textos[lang].academicoData;
+
+    const academicoDescricao = document.getElementById("academicoDescricao");
+    if (academicoDescricao) academicoDescricao.textContent = textos[lang].academicoDescricao;
+
+    const academicoLinkTexto = document.getElementById("academicoLinkTexto");
+    if (academicoLinkTexto) academicoLinkTexto.textContent = textos[lang].academicoLinkTexto;
+
+    const certificationsDivTitle = document.getElementById("certificationsDivTitle");
+    if (certificationsDivTitle) certificationsDivTitle.textContent = textos[lang].certificationsDivTitle;
+
+    const certificacaoTitulo = document.getElementById("certificacaoTitulo");
+    if (certificacaoTitulo) certificacaoTitulo.textContent = textos[lang].certificacaoTitulo;
+
+    const certificacaoEmissor = document.getElementById("certificacaoEmissor");
+    if (certificacaoEmissor) certificacaoEmissor.textContent = textos[lang].certificacaoEmissor;
+
+    const certificacaoData = document.getElementById("certificacaoData");
+    if (certificacaoData) certificacaoData.textContent = textos[lang].certificacaoData;
+
+    const certificacaoDescricao = document.getElementById("certificacaoDescricao");
+    if (certificacaoDescricao) certificacaoDescricao.textContent = textos[lang].certificacaoDescricao;
+
+    const certificacaoLinkTexto = document.getElementById("certificacaoLinkTexto");
+    if (certificacaoLinkTexto) certificacaoLinkTexto.textContent = textos[lang].certificacaoLinkTexto;
+
+    const certificacaoArtigoTexto = document.getElementById("certificacaoArtigoTexto");
+    if (certificacaoArtigoTexto) certificacaoArtigoTexto.textContent = textos[lang].certificacaoArtigoTexto;
   }
 
   let typed1 = null;
