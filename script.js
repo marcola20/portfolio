@@ -568,6 +568,24 @@ function renderizarExperiencias(lang) {
   }
 }
 
+// Theme toggle
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+function applyTheme(isDark) {
+  document.body.classList.toggle("light-mode", !isDark);
+  themeIcon.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+const savedTheme = localStorage.getItem("theme");
+applyTheme(savedTheme !== "light");
+
+themeToggle.addEventListener("click", () => {
+  const isLight = document.body.classList.contains("light-mode");
+  applyTheme(isLight);
+});
+
 // Fade-in on scroll
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
