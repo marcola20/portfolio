@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <title>Marcos Vinicius</title>
+
+  <script>
+  tailwind.config = {
+    darkMode: 'class'  
+  }
+</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#161513] text-white">
+
+  <nav class="bg-[#222222] text-white py-5 fixed top-0 left-0 right-0 z-50 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-center space-x-16 font-medium px-4 text-lg">
+      <a href="#home" class="hover:text-[#F0A500] transition">Home</a>
+      <a href="#conhecimentos" class="hover:text-[#F0A500] transition">Conhecimentos</a>
+      <a href="#projetos" class="hover:text-[#F0A500] transition">Projetos</a>
+      <a href="#experiencias" class="hover:text-[#F0A500] transition">Experiências</a>
+      <a href="#formacao" class="hover:text-[#F0A500] transition">Formação</a>
+    </div>
+  </nav>
+
+   <div class="fixed top-5 right-5 z-50 text-sm">
+    <div class="relative inline-block">
+      <button id="langToggle" class="bg-[#222222] text-white border border-white px-3 py-1 rounded flex items-center gap-2">
+        <img
+          id="currentFlag"
+          src="https://flagcdn.com/16x12/br.png"
+          srcset="https://flagcdn.com/32x24/br.png 2x,
+                  https://flagcdn.com/48x36/br.png 3x"
+          width="16"
+          height="12"
+          alt="BR"
+          class="inline"
+        />
+        <span id="currentLang">PT</span>
+      </button>
+
+      <div id="langMenu" class="hidden absolute right-0 mt-1 w-28 bg-[#222222] border border-white rounded shadow-md">
+        <div class="flex items-center gap-2 px-3 py-2 hover:bg-[#161513] cursor-pointer" data-lang="pt">
+          <img
+            src="https://flagcdn.com/16x12/br.png"
+            srcset="https://flagcdn.com/32x24/br.png 2x,
+                    https://flagcdn.com/48x36/br.png 3x"
+            width="16"
+            height="12"
+            alt="BR"
+          />
+          <span>PT</span>
+        </div>
+        <div class="flex items-center gap-2 px-3 py-2 hover:bg-[#161513] cursor-pointer" data-lang="en">
+          <img
+            src="https://flagcdn.com/16x12/gb.png"
+            srcset="https://flagcdn.com/32x24/gb.png 2x,
+                    https://flagcdn.com/48x36/gb.png 3x"
+            width="16"
+            height="12"
+            alt="GB"
+          />
+          <span>EN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="bg-[#161513] py-24 text-center px-4">
+      <img src="assets/perfil.jpg" alt="Marcos Vinicius" class="w-28 h-28 md:w-64 md:h-64 rounded-full mx-auto mb-8 object-cover" />
+
+      <h1 class="text-2xl md:text-6xl font-bold leading-snug text-white">
+        <div id="linha1" class="hidden"></div>
+        <div id="linha2" class="hidden"></div>
+        <div id="linha3" class="hidden"></div>
+      </h1>
+
+      <p class="mt-8 max-w-3xl mx-auto text-[#C5C5C5] text-sm md:text-lg leading-relaxed">
+        Atuo como desenvolvedor full-stack com foco principal em backend C# e integração de sistemas. No frontend, trabalho com interfaces modernas em WinForms usando DevExpress, além de Angular, React e JavaScript para aplicações web. Tenho experiência em toda a jornada do projeto — da arquitetura à entrega — sempre buscando criar soluções robustas, funcionais e com boa usabilidade.
+      </p>
+
+      <div class="mt-12 flex justify-center gap-6 flex-wrap">
+        <a href="https://wa.me/5541988334913" target="_blank"
+          class="bg-white text-[#161513] font-bold py-2 px-4 rounded-full transition hover:bg-transparent hover:text-white hover:border hover:border-white text-base md:py-4 md:px-10 md:text-lg">
+          Entre em Contato
+        </a>
+
+        <a href="assets/CV_-_Marcos_Souza.pdf" download
+          class="border border-white text-white font-bold py-2 px-4 rounded-full transition hover:bg-white hover:text-[#161513] text-base md:py-4 md:px-10 md:text-lg">
+          Download CV
+        </a>
+      </div>
+    </section>
+
+    <section id="conhecimentos" class="bg-[#222222] py-28 w-full">
+      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">CONHECIMENTOS</h2>
+          <p id="texto-conhecimento" class="text-[#C5C5C5] text-xs md:text-base text-justify leading-[1.8] md:mt-2 transition-all duration-300 min-h-[200px] md:min-h-[260px]">
+            C# é uma linguagem moderna, tipada e orientada a objetos, amplamente utilizada no desenvolvimento de aplicações desktop e backends robustos.<br><br>
+            <strong>Minha experiência:</strong> Trabalho com C# desde o início da carreira, construindo sistemas empresariais sólidos, especialmente no setor financeiro. Uso intensivo de arquitetura em camadas, princípios SOLID e integração com APIs, sempre com foco em performance e manutenção. No projeto BitBeak, utilizei Entity Framework para persistência com foco em produtividade e manutenção limpa.<br><br>
+            <span class="text-sm text-gray-400">Passe o mouse sobre os cards para saber mais.</span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-4 gap-2 sm:gap-4">
+          <div class="conhecimento-card ativo" data-tecnologia="csharp">
+            <img src="icons/csharp.png" alt="C#" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="netcore">
+            <img src="icons/netcore.png" alt=".NET Core" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="dotnet">
+            <img src="icons/dotnet.png" alt=".NET" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="figma">
+            <img src="icons/figma.png" alt="Figma" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="html">
+            <img src="icons/html.png" alt="HTML" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="css">
+            <img src="icons/css.png" alt="CSS" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="js">
+            <img src="icons/js.png" alt="JavaScript" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="tailwind">
+            <img src="icons/tailwind.png" alt="Tailwind" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="angular">
+            <img src="icons/angular.png" alt="Angular" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="react">
+            <img src="icons/react.png" alt="React" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="next">
+            <img src="icons/next.png" alt="Next.js" />
+          </div>
+          <div class="conhecimento-card" data-tecnologia="blazor">
+            <img src="icons/blazor.png" alt="Blazor" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="bg-[#161513] py-28 w-full text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl md:text-4xl font-bold mb-8 sm:mb-12 pl-4 sm:pl-0">PROJETOS</h2>
+
+        <div class="relative">
+         <button id="prevProjeto" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#F0A500] bg-opacity-70 p-2 rounded-full hover:bg-opacity-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="black">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+         </button>
+
+          <div id="projetosSlider" class="overflow-hidden">
+            <div id="projetosWrapper" class="flex transition-transform duration-500 ease-in-out w-fit">
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="bitbeak">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/bitbeak-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">BitBeak</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/csharp.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/netcore.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/react.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="jmh">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/jmh-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase ">JMH Caçambas</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/tailwind.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="rsvp">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/rsvp-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">RSVP Aniversário</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/css.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="cbfv">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/cbfv-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">CBFV Draft - FC25</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/csharp.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/netcore.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/blazor.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="inspire">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/inspire-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">Inspire Tech Company</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/ts.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/css.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button id="nextProjeto" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#F0A500] bg-opacity-70 p-2 rounded-full hover:bg-opacity-100 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="black">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <div id="modalProjeto" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 flex">
+        <div class="bg-[#222222] rounded-xl w-full max-w-[800px] p-8 relative overflow-y-auto max-h-[90vh] flex flex-col">
+          <button id="fecharModal" class="absolute top-4 right-4 text-white text-2xl font-bold hover:text-[#F0A500]">×</button>
+
+          <div class="flex flex-col gap-4">
+            <h2 id="modalTitulo" class="text-3xl font-bold text-[#F0A500]"></h2>
+            <p id="modalData" class="text-[#F0A500] font-medium text-sm"></p>
+            <p id="modalDescricao" class="text-[#C5C5C5] text-sm text-justify leading-relaxed"></p>
+          </div>
+
+          <div id="modalBotoes" class="flex flex-wrap gap-4 pt-6 mt-6 border-t border-gray-700"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="experiencias" class="bg-[#161513] py-28 w-full text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 id="experienciasTitulo" class="text-2xl sm:text-4xl font-bold mb-12">EXPERIÊNCIAS</h2>
+        <div id="experienciasWrapper" class="space-y-12"></div>
+      </div>
+    </section>
+
+    <section id="formacao" class="bg-[#222222] py-28 w-full text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 id="formacaoTitulo" class="text-2xl md:text-4xl font-bold mb-12">FORMAÇÃO & CERTIFICAÇÕES</h2>
+
+        <!-- Formação Acadêmica -->
+        <div class="mb-16">
+          <h3 id="formacaoSubtitulo" class="text-xl md:text-2xl font-semibold text-[#F0A500] mb-8 flex items-center gap-3">
+            <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+            </svg>
+            <span id="academicoDivTitle">Formação Acadêmica</span>
+          </h3>
+
+          <div class="bg-[#161513] rounded-xl p-6 md:p-8 border-l-4 border-[#F0A500] hover:border-[#CF7500] transition-colors">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h4 class="text-lg md:text-xl font-bold text-white mb-2" id="academicoTitulo">Bacharelado em Engenharia de Software</h4>
+                <p class="text-[#F0A500] font-medium text-sm md:text-base">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+              </div>
+              <div class="text-[#8491A0] text-sm md:text-base whitespace-nowrap" id="academicoData">Concluído em Fev/2025</div>
+            </div>
+            <p class="text-[#C5C5C5] text-sm md:text-base leading-relaxed mb-4" id="academicoDescricao">
+              Formação completa em Engenharia de Software com ênfase em desenvolvimento de sistemas, arquitetura de software, metodologias ágeis e gestão de projetos. Durante a graduação, desenvolvi projetos práticos aplicando tecnologias modernas e boas práticas de engenharia.
+            </p>
+            <a href="https://www.linkedin.com/posts/marcosviniciussa_engenhariadesoftware-formatura-pucpr-activity-7302743583386669057-3vCp?utm_source=share&utm_medium=member_desktop"
+               target="_blank"
+               class="inline-flex items-center gap-2 text-[#F0A500] hover:text-[#CF7500] transition-colors text-sm font-medium">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span id="academicoLinkTexto">Ver post no LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Certificações -->
+        <div>
+          <h3 id="certificacoesSubtitulo" class="text-xl md:text-2xl font-semibold text-[#F0A500] mb-8 flex items-center gap-3">
+            <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span id="certificationsDivTitle">Certificações e Conquistas</span>
+          </h3>
+
+          <div class="bg-[#161513] rounded-xl p-6 md:p-8 border-l-4 border-[#F0A500] hover:border-[#CF7500] transition-colors">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h4 class="text-lg md:text-xl font-bold text-white mb-2" id="certificacaoTitulo">Artigo Aceito no SBES 2025 (CBSoft)</h4>
+                <p class="text-[#F0A500] font-medium text-sm md:text-base" id="certificacaoEmissor">Sociedade Brasileira de Computação (SBC)</p>
+              </div>
+              <div class="text-[#8491A0] text-sm md:text-base whitespace-nowrap" id="certificacaoData">Jun 2025</div>
+            </div>
+            <p class="text-[#C5C5C5] text-sm md:text-base leading-relaxed mb-4" id="certificacaoDescricao">
+              Artigo aprovado no XXXIX Simpósio Brasileiro de Engenharia de Software (SBES 2025), principal evento da área no Brasil, parte do CBSoft (Congresso Brasileiro de Software). O trabalho apresenta o BitBeak, uma ferramenta educacional gamificada que usa narrativas em mangá para apoiar o ensino introdutório de programação. A pesquisa envolve o desenvolvimento da plataforma, trilhas de aprendizagem, gamificação e avaliação empírica com estudantes por meio do modelo MEEGA+. A apresentação foi realizada presencialmente em Recife (PE), em setembro de 2025.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://www.linkedin.com/posts/marcosviniciussa_em-setembro-tivemos-nosso-artigo-bitbeak-activity-7394387147560058880-GLs2?utm_source=share&utm_medium=member_desktop"
+                 target="_blank"
+                 class="inline-flex items-center gap-2 text-[#F0A500] hover:text-[#CF7500] transition-colors text-sm font-medium">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span id="certificacaoLinkTexto">Ver post no LinkedIn</span>
+              </a>
+              <a href="https://sol.sbc.org.br/index.php/sbes/article/view/37021/36806"
+                 target="_blank"
+                 class="inline-flex items-center gap-2 text-[#F0A500] hover:text-[#CF7500] transition-colors text-sm font-medium">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <span id="certificacaoArtigoTexto">Ler artigo completo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#141414] py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 id="contatoTitulo" class="text-2xl md:text-3xl font-bold text-[#D9D9D9] mb-10">ENTRE EM CONTATO</h2>
+
+        <div class="grid grid-cols-2 gap-x-6 gap-y-10 justify-items-center text-[#D9D9D9] text-base md:flex md:justify-center md:gap-12">
+
+          <a href="mailto:sbmarcos777@gmail.com" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110 cursor-pointer">
+            <div class="bg-[#2A2A2A] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center relative">
+              <img src="icons/email.png" alt="Email"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain absolute opacity-100 group-hover:opacity-0 transition-opacity duration-200" />
+              <img src="icons/email_dourado.png" alt="Email Hover"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+            </div>
+            <span class="text-xs sm:text-base underline group-hover:text-[#F0A500]">sbmarcos777@gmail.com</span>
+          </a>
+
+          <a href="https://wa.me/5541988334913" target="_blank" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110 cursor-pointer">
+            <div class="bg-[#2A2A2A] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center relative">
+              <img src="icons/telefone.png" alt="Telefone"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain absolute opacity-100 group-hover:opacity-0 transition-opacity duration-200" />
+              <img src="icons/telefone_dourado.png" alt="Telefone Hover"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+            </div>
+            <span class="text-xs sm:text-base group-hover:text-[#F0A500]">+55 41 9 8833-4913</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/marcosviniciussa" target="_blank" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110 cursor-pointer">
+            <div class="bg-[#2A2A2A] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center relative">
+              <img src="icons/linkedin.png" alt="LinkedIn"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain absolute opacity-100 group-hover:opacity-0 transition-opacity duration-200" />
+              <img src="icons/linkedin_dourado.png" alt="LinkedIn Hover"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+            </div>
+            <span class="text-xs sm:text-base group-hover:text-[#F0A500]">marcosviniciussa</span>
+          </a>
+
+          <a href="https://github.com/marcola20" target="_blank" class="group flex flex-col items-center gap-2 transition-transform duration-200 hover:scale-110 cursor-pointer">
+            <div class="bg-[#2A2A2A] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center relative">
+              <img src="icons/github.png" alt="GitHub"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain absolute opacity-100 group-hover:opacity-0 transition-opacity duration-200" />
+              <img src="icons/github_dourado.png" alt="GitHub Hover"
+                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+            </div>
+            <span class="text-xs sm:text-base group-hover:text-[#F0A500]">marcola20</span>
+          </a>
+
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
