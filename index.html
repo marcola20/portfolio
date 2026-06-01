@@ -30,6 +30,22 @@
     </div>
   </nav>
 
+  <!-- Hamburger button (mobile only) -->
+  <button id="menuHamburger" class="md:hidden fixed top-4 left-4 z-50 bg-[#222222] border border-white p-2 rounded flex flex-col justify-center items-center gap-[5px] w-10 h-10">
+    <span class="hamburger-line block w-5 h-[2px] bg-white transition-all duration-300"></span>
+    <span class="hamburger-line block w-5 h-[2px] bg-white transition-all duration-300"></span>
+    <span class="hamburger-line block w-5 h-[2px] bg-white transition-all duration-300"></span>
+  </button>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobileMenu" class="md:hidden fixed inset-0 z-40 bg-[#161513] bg-opacity-98 flex flex-col items-center justify-center gap-10 text-2xl font-bold hidden">
+    <a href="#home" class="mobile-nav-link hover:text-[#F0A500] transition">Home</a>
+    <a href="#conhecimentos" class="mobile-nav-link hover:text-[#F0A500] transition">Conhecimentos</a>
+    <a href="#projetos" class="mobile-nav-link hover:text-[#F0A500] transition">Projetos</a>
+    <a href="#experiencias" class="mobile-nav-link hover:text-[#F0A500] transition">Experiências</a>
+    <a href="#formacao" class="mobile-nav-link hover:text-[#F0A500] transition">Formação</a>
+  </div>
+
    <div class="fixed top-5 right-5 z-50 text-sm">
     <div class="relative inline-block">
       <button id="langToggle" class="bg-[#222222] text-white border border-white px-3 py-1 rounded flex items-center gap-2">
@@ -180,34 +196,6 @@
                 </div>
               </div>
 
-              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="jmh">
-                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/jmh-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
-                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
-                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase ">JMH Caçambas</h3>
-                  </div>
-                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
-                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
-                    <img src="icons/tailwind.png" class="h-[50px] max-w-[60px] object-contain" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="rsvp">
-                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/rsvp-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
-                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
-                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">RSVP Aniversário</h3>
-                  </div>
-                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
-                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
-                    <img src="icons/css.png" class="h-[50px] max-w-[60px] object-contain" />
-                  </div>
-                </div>
-              </div>
-
               <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="cbfv">
                 <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
                   <img src="assets/cbfv-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
@@ -236,6 +224,34 @@
                 </div>
               </div>
 
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="jmh">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/jmh-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase ">JMH Caçambas</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/tailwind.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="rsvp">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/rsvp-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">RSVP Aniversário</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/html.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/css.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -245,6 +261,8 @@
             </svg>
           </button>
         </div>
+
+        <div id="projetosDots" class="flex justify-center gap-2 mt-6"></div>
 
       </div>
 

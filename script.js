@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navItems[i]) navItems[i].textContent = text;
     });
 
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+    textos[lang].nav.forEach((text, i) => {
+      if (mobileLinks[i]) mobileLinks[i].textContent = text;
+    });
+
     const titulo = document.querySelector("#conhecimentos h2");
     if (titulo) titulo.textContent = textos[lang].conhecimentosTitulo;
 
@@ -233,6 +238,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Mobile menu
+  const hamburger = document.getElementById("menuHamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+  const hamburgerLines = document.querySelectorAll(".hamburger-line");
+
+  function toggleMobileMenu() {
+    const isOpen = !mobileMenu.classList.contains("hidden");
+    if (isOpen) {
+      mobileMenu.classList.add("hidden");
+      hamburgerLines[0].style.transform = "";
+      hamburgerLines[1].style.opacity = "";
+      hamburgerLines[2].style.transform = "";
+    } else {
+      mobileMenu.classList.remove("hidden");
+      hamburgerLines[0].style.transform = "translateY(7px) rotate(45deg)";
+      hamburgerLines[1].style.opacity = "0";
+      hamburgerLines[2].style.transform = "translateY(-7px) rotate(-45deg)";
+    }
+  }
+
+  hamburger.addEventListener("click", toggleMobileMenu);
+  mobileNavLinks.forEach(link => link.addEventListener("click", toggleMobileMenu));
+
   const langMenu = document.getElementById("langMenu");
   if (langMenu) {
     langMenu.querySelectorAll("[data-lang]").forEach(item => {
@@ -279,12 +308,39 @@ const totalCards = todosCards.length;
 wrapper.style.transform = `translateX(-${slideIndex * cardWidthPercent}%)`;
 
 
+const totalProjetos = cards.length;
+const dotsContainer = document.getElementById("projetosDots");
+
+for (let i = 0; i < totalProjetos; i++) {
+  const dot = document.createElement("button");
+  dot.className = "w-2 h-2 rounded-full transition-all duration-300 bg-[#555] hover:bg-[#F0A500]";
+  dot.addEventListener("click", () => {
+    slideIndex = cardsPorTela + i;
+    updateSlider();
+    updateDots();
+  });
+  dotsContainer.appendChild(dot);
+}
+
+function updateDots() {
+  const realIndex = ((slideIndex - cardsPorTela) % totalProjetos + totalProjetos) % totalProjetos;
+  dotsContainer.querySelectorAll("button").forEach((dot, i) => {
+    dot.classList.toggle("bg-[#F0A500]", i === realIndex);
+    dot.classList.toggle("w-4", i === realIndex);
+    dot.classList.toggle("bg-[#555]", i !== realIndex);
+    dot.classList.toggle("w-2", i !== realIndex);
+  });
+}
+
 function updateSlider(animate = true) {
   if (!animate) wrapper.style.transition = "none";
   else wrapper.style.transition = "transform 0.5s ease-in-out";
 
   wrapper.style.transform = `translateX(-${slideIndex * cardWidthPercent}%)`;
+  updateDots();
 }
+
+updateDots();
 
 document.getElementById("nextProjeto").addEventListener("click", () => {
   slideIndex++;
@@ -381,7 +437,8 @@ const projetos = [
     descricao_pt: "Turnover League é uma plataforma completa de gerenciamento de liga de fantasia esportiva, com foco em draft, gestão de elenco e trocas entre franquias. O sistema foi desenvolvido para ligas privadas que buscam uma experiência organizada e profissional.<br><br>A plataforma oferece um sistema de draft ao vivo com salas dedicadas por liga, controle de salary cap por franquia, mercado de agentes livres, sistema de trocas entre times com validação de regras, e perfis personalizados de jogadores com badges de personalidade que influenciam decisões táticas.<br><br>Desenvolvido com C# .NET 10 e Blazor Server, o projeto explora comunicação em tempo real via SignalR para o draft ao vivo, arquitetura em camadas (Domain, Infrastructure, Web) e integração com banco de dados relacional via Entity Framework Core. O resultado é uma ferramenta robusta, escalável e pronta para uso em ligas reais.",
     descricao_en: "Turnover League is a complete fantasy sports league management platform focused on drafts, roster management, and trades between franchises. The system was designed for private leagues looking for an organized and professional experience.<br><br>The platform features a live draft system with dedicated rooms per league, franchise salary cap control, free agency market, a trade system with rule validation, and custom player profiles with personality badges that influence tactical decisions.<br><br>Built with C# .NET 10 and Blazor Server, the project leverages real-time communication via SignalR for the live draft, a layered architecture (Domain, Infrastructure, Web), and relational database integration via Entity Framework Core. The result is a robust, scalable tool ready for use in real leagues.",
     botoes: [
-      { label_pt: "Site", label_en: "Site", url: "https://turnover-league.onrender.com/" }
+      { label_pt: "Site", label_en: "Site", url: "https://turnover-league.onrender.com/" },
+      { label_pt: "Repositório", label_en: "Repository", url: "https://github.com/marcola20/Turnover-League" }
     ]
   }
 ];
