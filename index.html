@@ -90,7 +90,7 @@
   </div>
 
   <main>
-    <section id="home" class="bg-[#161513] py-24 text-center px-4">
+    <section id="home" class="bg-[#161513] pt-32 pb-24 md:py-24 text-center px-4">
       <img src="assets/perfil.jpg" alt="Marcos Vinicius" class="w-28 h-28 md:w-64 md:h-64 rounded-full mx-auto mb-8 object-cover" />
 
       <h1 class="text-2xl md:text-6xl font-bold leading-snug text-white">
@@ -198,7 +198,7 @@
 
               <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="cbfv">
                 <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/cbfv-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <img src="assets/cbfv-cover.jpg" loading="lazy" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
                   <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
                     <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">CBFV Draft - FC25</h3>
                   </div>
@@ -212,7 +212,7 @@
 
               <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="turnover">
                 <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/turnover-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <img src="assets/turnover-cover.jpg" loading="lazy" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
                   <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
                     <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">Turnover League</h3>
                   </div>
@@ -226,7 +226,7 @@
 
               <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="jmh">
                 <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/jmh-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <img src="assets/jmh-cover.jpg" loading="lazy" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
                   <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
                     <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase ">JMH Caçambas</h3>
                   </div>
@@ -240,7 +240,7 @@
 
               <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="rsvp">
                 <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/rsvp-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <img src="assets/rsvp-cover.jpg" loading="lazy" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
                   <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
                     <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">RSVP Aniversário</h3>
                   </div>
@@ -262,7 +262,10 @@
           </button>
         </div>
 
-        <div id="projetosDots" class="flex justify-center gap-2 mt-6"></div>
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <div id="projetosDots" class="flex gap-2"></div>
+          <span id="sliderContador" class="text-[#8491A0] text-sm font-medium"></span>
+        </div>
 
       </div>
 

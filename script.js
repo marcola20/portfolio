@@ -330,6 +330,8 @@ function updateDots() {
     dot.classList.toggle("bg-[#555]", i !== realIndex);
     dot.classList.toggle("w-2", i !== realIndex);
   });
+  const contador = document.getElementById("sliderContador");
+  if (contador) contador.textContent = `${realIndex + 1} / ${totalProjetos}`;
 }
 
 function updateSlider(animate = true) {
@@ -565,3 +567,42 @@ function renderizarExperiencias(lang) {
     contatoTitulo.textContent = lang === "pt" ? "ENTRE EM CONTATO" : "GET IN TOUCH";
   }
 }
+
+// Fade-in on scroll
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll("section, footer").forEach(el => {
+  el.classList.add("fade-section");
+  fadeObserver.observe(el);
+});
+
+// Active nav link on scroll
+const secoes = ["home", "conhecimentos", "projetos", "experiencias", "formacao"];
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const id = entry.target.id;
+    const idx = secoes.indexOf(id);
+    if (idx === -1) return;
+
+    document.querySelectorAll("nav a").forEach((a, i) => {
+      a.classList.toggle("nav-ativo", i === idx);
+    });
+    document.querySelectorAll(".mobile-nav-link").forEach((a, i) => {
+      a.classList.toggle("nav-ativo", i === idx);
+    });
+  });
+}, { threshold: 0.4 });
+
+secoes.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) navObserver.observe(el);
+});

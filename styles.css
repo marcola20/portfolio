@@ -1,4 +1,8 @@
-body 
+html {
+  scroll-behavior: smooth;
+}
+
+body
 {
     font-family: 'Ubuntu', sans-serif;
 }
@@ -66,4 +70,40 @@ body
   100% {
     background-position: 400% 50%;
   }
+}
+
+/* Fade-in on scroll */
+.fade-section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Placeholder on cover images while loading */
+#projetosWrapper img.w-full {
+  background-color: #2a2a2a;
+}
+
+/* Gold border on project cards */
+#projetosWrapper .group {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, filter 0.3s ease;
+}
+
+#projetosWrapper .group:hover {
+  border-color: #F0A500;
+}
+
+/* Active nav link */
+nav a.nav-ativo {
+  color: #F0A500;
+}
+
+#mobileMenu a.nav-ativo {
+  color: #F0A500;
 }
