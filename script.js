@@ -373,18 +373,15 @@ const projetos = [
     ]
   },
   {
-    id: "inspire",
-    titulo_pt: "Inspire Tech Company",
-    titulo_en: "Inspire Tech Company",
-    data_pt: "02 de setembro de 2024",
-    data_en: "September 02, 2024",
-    descricao_pt: "Site institucional criado para a Inspire Tech Company, uma empresa focada em marketing e publicidade. Durante minha atuação na equipe, fui responsável por desenvolver todo o site do zero, incluindo layout, identidade visual e estrutura funcional.<br><br>O objetivo era transmitir inovação, confiança e profissionalismo para potenciais clientes. Para isso, utilizei uma paleta escura contrastando com tons vibrantes de roxo, reforçando modernidade e criatividade. A página principal foi pensada para causar impacto logo de início, com mensagens diretas, destaques de serviços e cases de sucesso.<br><br>O desenvolvimento foi feito com HTML, CSS e TypeScript, garantindo código limpo, organizado e performático. Cada seção foi desenhada para entregar clareza na navegação e destacar os diferenciais da empresa de forma objetiva e visualmente marcante.",
-    descricao_en: "Institutional website created for Inspire Tech Company, a business focused on marketing and advertising. While working with the team, I was responsible for developing the entire site from scratch — including layout, visual identity, and functional structure.<br><br>The goal was to convey innovation, trust, and professionalism to potential clients. A dark color palette combined with vibrant purple accents was used to reflect modernity and creativity. The homepage was designed to make an immediate impact, with direct messages, highlighted services, and success stories.<br><br>The development was done using HTML, CSS, and TypeScript, ensuring clean, organized, and high-performance code. Each section was built to deliver intuitive navigation and clearly showcase the company’s strengths in a visually compelling way.",
-    video: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    id: "turnover",
+    titulo_pt: "Turnover League",
+    titulo_en: "Turnover League",
+    data_pt: "Maio de 2026",
+    data_en: "May 2026",
+    descricao_pt: "Turnover League é uma plataforma completa de gerenciamento de liga de fantasia esportiva, com foco em draft, gestão de elenco e trocas entre franquias. O sistema foi desenvolvido para ligas privadas que buscam uma experiência organizada e profissional.<br><br>A plataforma oferece um sistema de draft ao vivo com salas dedicadas por liga, controle de salary cap por franquia, mercado de agentes livres, sistema de trocas entre times com validação de regras, e perfis personalizados de jogadores com badges de personalidade que influenciam decisões táticas.<br><br>Desenvolvido com C# .NET 10 e Blazor Server, o projeto explora comunicação em tempo real via SignalR para o draft ao vivo, arquitetura em camadas (Domain, Infrastructure, Web) e integração com banco de dados relacional via Entity Framework Core. O resultado é uma ferramenta robusta, escalável e pronta para uso em ligas reais.",
+    descricao_en: "Turnover League is a complete fantasy sports league management platform focused on drafts, roster management, and trades between franchises. The system was designed for private leagues looking for an organized and professional experience.<br><br>The platform features a live draft system with dedicated rooms per league, franchise salary cap control, free agency market, a trade system with rule validation, and custom player profiles with personality badges that influence tactical decisions.<br><br>Built with C# .NET 10 and Blazor Server, the project leverages real-time communication via SignalR for the live draft, a layered architecture (Domain, Infrastructure, Web), and relational database integration via Entity Framework Core. The result is a robust, scalable tool ready for use in real leagues.",
     botoes: [
-      { label_pt: "Repositório", label_en: "Repository", url: "https://github.com/Inspire-Tech-Company/inspire-tech" },
-      { label_pt: "Figma", label_en: "Figma", url: "https://www.figma.com/proto/B6LStoR4BA6HSCLwl3VcQV/Inspire-Tech?node-id=1-2&t=r4nXK6dE3SUr5QyT-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=149%3A4&show-proto-sidebar=1" },
-      { label_pt: "Site", label_en: "Site", tooltip_pt: "O site atualmente está fora do ar.", tooltip_en: "The website is currently offline." }
+      { label_pt: "Site", label_en: "Site", url: "https://turnover-league.onrender.com/" }
     ]
   }
 ];
