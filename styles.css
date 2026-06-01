@@ -198,9 +198,14 @@ body.light-mode .text-gray-400 {
   color: #666666 !important;
 }
 
-body.light-mode #themeToggle {
+body.light-mode #themeToggle,
+body.light-mode #backToTop {
   background-color: #e8e5e0;
   border-color: #F0A500;
+}
+
+body.light-mode #backToTop svg {
+  color: #1a1a1a;
 }
 
 body.light-mode #langToggle {
