@@ -18,10 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
       react: `React é uma biblioteca JavaScript para construção de interfaces reativas e performáticas.<br><br><strong>Utilização:</strong> Crio componentes reutilizáveis e dinâmicos em aplicações com foco em experiência do usuário e integração com APIs externas.`,
       next: `Next.js é um framework para React com renderização híbrida, performance otimizada e excelente suporte a SEO.<br><br><strong>Quando uso:</strong> Para aplicações com foco em tempo de carregamento e visibilidade orgânica, aproveitando recursos como SSR e rotas dinâmicas.`,
       blazor: `Blazor é um framework da Microsoft para construção de aplicações web interativas usando C# no lugar de JavaScript, permitindo o compartilhamento de código entre cliente e servidor.<br><br><strong>Minha experiência:</strong> Utilizo Blazor para criar interfaces web ricas e dinâmicas aproveitando o ecossistema .NET, facilitando a integração com APIs e lógicas de negócio já implementadas em C#, proporcionando uma experiência de desenvolvimento consistente e produtiva.`,
+      python: `Python é a linguagem que uso para pipelines de dados, integração com LLMs e serviços de backend leves.<br><br><strong>Na prática:</strong> No Extrator de Documentos Financeiros, construí em Python 3.12 toda a extração, validação e avaliação, com Pydantic v2 para schemas tipados e SQLAlchemy 2 para persistência.`,
+      fastapi: `FastAPI é um framework Python para APIs com validação automática de dados e documentação gerada a partir dos tipos.<br><br><strong>Na prática:</strong> Usei no Extrator de Documentos Financeiros para expor a fila de revisão e o diagnóstico de cada documento à interface em Next.js, com esquemas Pydantic compartilhados entre a API e o pipeline.`,
+      postgres: `PostgreSQL é o banco relacional que uso como padrão para persistência em projetos web e de backend.<br><br><strong>Na prática:</strong> Trabalhei com PostgreSQL em APIs .NET para telemetria agrícola na Spro IT Solutions e, mais recentemente, na fila de revisão do Extrator de Documentos Financeiros, com SQLAlchemy 2 e migrações versionadas com Alembic.`,
+      ia: `Trabalho com LLMs como componente de sistema, não como caixa preta: saída estruturada, avaliação automatizada com evals, defesa contra prompt injection e integração direta com os SDKs da Anthropic e do Gemini, sem framework intermediário.<br><br><strong>Na prática:</strong> No Extrator de Documentos Financeiros, a confiança na extração vem de validação determinística sobre o próprio documento, não do modelo, e a taxa de escape é medida contra um corpus adversarial próprio. No dia a dia, uso desenvolvimento assistido por agentes a partir de especificação escrita e com revisão do resultado. Tenho o Google AI Professional Certificate.`,
       legenda: `Passe o mouse sobre os cards para saber mais.`,
       nav: ["Home", "Conhecimentos", "Projetos", "Experiência", "Formação"],
       conhecimentosTitulo: "CONHECIMENTOS",
-      heroTexto: `Atuo como desenvolvedor full-stack com foco principal em backend C# e integração de sistemas. No frontend, trabalho com interfaces modernas em WinForms usando DevExpress, além de Angular, React e JavaScript para aplicações web. Tenho experiência em toda a jornada do projeto — da arquitetura à entrega — sempre buscando criar soluções robustas, funcionais e com boa usabilidade.`,
+      heroTexto: `Atuo como desenvolvedor full-stack com foco principal em backend C# e integração de sistemas. No frontend, trabalho com interfaces modernas em WinForms usando DevExpress, além de Angular, React e JavaScript para aplicações web. Tenho experiência em toda a jornada do projeto — da arquitetura à entrega — sempre buscando criar soluções robustas, funcionais e com boa usabilidade. Mais recentemente, trabalho com integração de LLMs em sistemas, com foco em saída estruturada, validação determinística e avaliação automatizada.`,
       heroBotaoContato: "Entre em Contato",
       heroBotaoCV: "Download CV",
       projetosTitulo: "PROJETOS",
@@ -37,7 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
       certificacaoData: "Jun 2025",
       certificacaoDescricao: "Artigo aprovado no XXXIX Simpósio Brasileiro de Engenharia de Software (SBES 2025), principal evento da área no Brasil, parte do CBSoft (Congresso Brasileiro de Software). O trabalho apresenta o BitBeak, uma ferramenta educacional gamificada que usa narrativas em mangá para apoiar o ensino introdutório de programação. A pesquisa envolve o desenvolvimento da plataforma, trilhas de aprendizagem, gamificação e avaliação empírica com estudantes por meio do modelo MEEGA+. A apresentação foi realizada presencialmente em Recife (PE), em setembro de 2025.",
       certificacaoLinkTexto: "Ver post no LinkedIn",
-      certificacaoArtigoTexto: "Ler artigo completo"
+      certificacaoArtigoTexto: "Ler artigo completo",
+      certificacao2Titulo: "Google AI Professional Certificate",
+      certificacao2Emissor: "Google, via Coursera",
+      certificacao2Data: "Ago 2026",
+      certificacao2Descricao: "Certificado profissional do Google composto por sete cursos sobre aplicação de IA generativa ao trabalho: brainstorming, pesquisa, comunicação, criação de conteúdo e análise de dados. Complementa a experiência prática com LLMs demonstrada no projeto Extrator de Documentos Financeiros.",
+      certificacao2LinkTexto: "Ver credencial"
     },
     en: {
       csharp: `C# is a modern, statically-typed, object-oriented language widely used in building robust desktop and backend applications.<br><br><strong>My experience:</strong> I've worked with C# since the beginning of my career, building solid enterprise systems — especially in the financial sector — using layered architecture, SOLID principles, and API integrations. In the BitBeak project, I used Entity Framework for clean and efficient persistence.`,
@@ -52,10 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
       react: `React is a JavaScript library for building reactive and high-performance user interfaces.<br><br><strong>How I apply it:</strong> I create reusable and dynamic components with great user experience and API integration.`,
       next: `Next.js is a React framework with hybrid rendering, optimized performance, and excellent SEO support.<br><br><strong>Use cases:</strong> I build fast-loading apps with dynamic routing and server-side rendering for organic visibility.`,
       blazor: `Blazor is a Microsoft framework for building interactive web applications using C# instead of JavaScript, enabling code sharing between client and server.<br><br><strong>My experience:</strong> I use Blazor to create rich and dynamic web interfaces leveraging the .NET ecosystem, facilitating integration with APIs and business logic already implemented in C#, providing a consistent and productive development experience.`,
+      python: `Python is the language I use for data pipelines, LLM integration and lightweight backend services.<br><br><strong>In practice:</strong> In the Financial Document Extractor, I built the entire extraction, validation and evaluation in Python 3.12, with Pydantic v2 for typed schemas and SQLAlchemy 2 for persistence.`,
+      fastapi: `FastAPI is a Python framework for APIs with automatic data validation and documentation generated from type hints.<br><br><strong>In practice:</strong> I used it in the Financial Document Extractor to expose the review queue and each document's diagnosis to the Next.js interface, with Pydantic schemas shared between the API and the pipeline.`,
+      postgres: `PostgreSQL is the relational database I use by default for persistence in web and backend projects.<br><br><strong>In practice:</strong> I worked with PostgreSQL in .NET APIs for agricultural telemetry at Spro IT Solutions and, more recently, in the review queue of the Financial Document Extractor, with SQLAlchemy 2 and versioned migrations via Alembic.`,
+      ia: `I work with LLMs as a system component, not a black box: structured output, automated evaluation with evals, defense against prompt injection and direct integration with the Anthropic and Gemini SDKs, without an intermediate framework.<br><br><strong>In practice:</strong> In the Financial Document Extractor, confidence in the extraction comes from deterministic validation over the document itself, not from the model, and the escape rate is measured against a custom adversarial corpus. Day to day, I use agent-assisted development driven by written specifications and with review of the output. I hold the Google AI Professional Certificate.`,
       legenda: `Hover over the cards to learn more.`,
       nav: ["Home", "Skills", "Projects", "Experience", "Education"],
       conhecimentosTitulo: "SKILLS",
-      heroTexto: `I'm a full-stack developer focused on backend with C# and system integration. On the frontend, I work with modern WinForms (DevExpress), Angular, React and JavaScript. I have experience across the entire project lifecycle — from architecture to delivery — always aiming for robust, functional and user-friendly solutions.`,
+      heroTexto: `I'm a full-stack developer focused on backend with C# and system integration. On the frontend, I work with modern WinForms (DevExpress), Angular, React and JavaScript. I have experience across the entire project lifecycle — from architecture to delivery — always aiming for robust, functional and user-friendly solutions. More recently, I have been integrating LLMs into systems, with a focus on structured output, deterministic validation and automated evaluation.`,
       heroBotaoContato: "Contact Me",
       heroBotaoCV: "Download CV",
       projetosTitulo: "PROJECTS",
@@ -71,7 +84,12 @@ document.addEventListener("DOMContentLoaded", function () {
       certificacaoData: "Jun 2025",
       certificacaoDescricao: "Paper accepted at the XXXIX Brazilian Symposium on Software Engineering (SBES 2025), Brazil's leading event in the field, part of CBSoft (Brazilian Congress on Software). The work presents BitBeak, a gamified educational tool that uses manga narratives to support introductory programming education. The research involves platform development, learning paths, gamification, and empirical evaluation with students using the MEEGA+ model. The presentation was held in-person in Recife, Brazil, in September 2025.",
       certificacaoLinkTexto: "View LinkedIn post",
-      certificacaoArtigoTexto: "Read full paper"
+      certificacaoArtigoTexto: "Read full paper",
+      certificacao2Titulo: "Google AI Professional Certificate",
+      certificacao2Emissor: "Google, via Coursera",
+      certificacao2Data: "Aug 2026",
+      certificacao2Descricao: "Google professional certificate made up of seven courses on applying generative AI to work: brainstorming, research, communication, content creation and data analysis. It complements the hands-on LLM experience demonstrated in the Financial Document Extractor project.",
+      certificacao2LinkTexto: "View credential"
     }
   };
 
@@ -153,6 +171,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const certificacaoArtigoTexto = document.getElementById("certificacaoArtigoTexto");
     if (certificacaoArtigoTexto) certificacaoArtigoTexto.textContent = textos[lang].certificacaoArtigoTexto;
+
+    ["certificacao2Titulo", "certificacao2Emissor", "certificacao2Data", "certificacao2Descricao", "certificacao2LinkTexto"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = textos[lang][id];
+    });
   }
 
   let typed1 = null;
@@ -520,15 +543,15 @@ document.addEventListener("keydown", e => {
 
 const experiencias = [
   {
-    id: "magware",
-    empresa: "MAG.WARE",
-    icon: "icons/magware_logo.png",
+    id: "azguidance",
+    empresa: "AZ Guidance",
+    icon: "icons/azguidance_logo.png",
     cargo_pt: "Engenheiro de Software na ",
     cargo_en: "Software Engineer at ",
     data_pt: "Dez 2024 — Atualmente",
     data_en: "Dec 2024 — Present",
-    descricao_pt: `Atuo como engenheiro de software especializado em aplicações desktop desenvolvidas com C#, WinForms e DevExpress, criando soluções robustas, escaláveis e de alta performance voltadas ao setor financeiro. Sou responsável por projetar arquiteturas eficientes, modernizar sistemas legados, otimizar fluxos internos e integrar serviços via WebServices (REST/SOAP). Também colaboro na criação de interfaces ricas com componentes personalizados, sempre aplicando boas práticas de codificação e metodologias ágeis para garantir qualidade, manutenção e evolução contínua dos projetos.`,
-    descricao_en: `I work as a software engineer specialized in desktop applications using C#, WinForms, and DevExpress, building robust, scalable, and high-performance solutions for the financial sector. I’m responsible for designing efficient architectures, modernizing legacy systems, optimizing internal workflows, and integrating services through WebServices (REST/SOAP). I also contribute to the development of rich interfaces with custom components, applying clean code practices and agile methodologies to ensure quality, maintainability, and continuous improvement.`
+    descricao_pt: `Atuo como engenheiro de software especializado em aplicações desktop desenvolvidas com C#, WinForms e DevExpress, criando soluções robustas, escaláveis e de alta performance voltadas ao setor financeiro. Sou responsável por projetar arquiteturas eficientes, modernizar sistemas legados, otimizar fluxos internos e integrar serviços via WebServices (REST/SOAP). Também colaboro na criação de interfaces ricas com componentes personalizados, sempre aplicando boas práticas de codificação e metodologias ágeis para garantir qualidade, manutenção e evolução contínua dos projetos. Uso IA generativa no dia a dia do desenvolvimento, para análise de código, geração de documentação, identificação de bugs, refatoração e apoio a decisões de arquitetura, sempre com revisão do resultado.`,
+    descricao_en: `I work as a software engineer specialized in desktop applications using C#, WinForms, and DevExpress, building robust, scalable, and high-performance solutions for the financial sector. I’m responsible for designing efficient architectures, modernizing legacy systems, optimizing internal workflows, and integrating services through WebServices (REST/SOAP). I also contribute to the development of rich interfaces with custom components, applying clean code practices and agile methodologies to ensure quality, maintainability, and continuous improvement. I use generative AI in day-to-day development, for code analysis, documentation, bug finding, refactoring and support in architecture decisions, always reviewing the output.`,
   },
   {
     id: "inspire",
