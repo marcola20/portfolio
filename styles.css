@@ -258,3 +258,19 @@ nav a.nav-ativo {
 #mobileMenu a.nav-ativo {
   color: #F0A500;
 }
+
+/* Modal scrollbar (only shows when the description is long) */
+#modalProjeto > div {
+  scrollbar-width: thin;
+  scrollbar-color: #F0A500 transparent;
+}
+#modalProjeto > div::-webkit-scrollbar {
+  width: 6px;
+}
+#modalProjeto > div::-webkit-scrollbar-track {
+  background: transparent;
+}
+#modalProjeto > div::-webkit-scrollbar-thumb {
+  background: #F0A500;
+  border-radius: 3px;
+}
