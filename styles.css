@@ -161,6 +161,40 @@ body.light-mode footer .group img {
   filter: brightness(0);
 }
 
+/* CNPJ badge in the footer */
+.cnpj-selo {
+  background-color: #1d1c1a;
+  border: 1px solid rgba(240, 165, 0, 0.28);
+}
+
+.cnpj-icone {
+  background-color: rgba(240, 165, 0, 0.12);
+  color: #F0A500;
+}
+
+.cnpj-numero {
+  color: #D9D9D9;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+body.light-mode .cnpj-selo {
+  background-color: #f4f2ef;
+  border-color: rgba(207, 117, 0, 0.35);
+}
+
+body.light-mode .cnpj-icone {
+  color: #CF7500;
+}
+
+body.light-mode #cnpjTexto {
+  color: #CF7500 !important;
+}
+
+body.light-mode .cnpj-numero {
+  color: #1a1a1a;
+}
+
 /* Experience logos → invert to dark */
 body.light-mode #experienciasWrapper img {
   filter: brightness(0);

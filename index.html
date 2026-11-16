@@ -7,12 +7,12 @@
   <meta name="supported-color-schemes" content="light">
   <title>Marcos Vinicius</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
   tailwind.config = {
-    darkMode: 'class'  
+    darkMode: 'class'
   }
 </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
@@ -208,9 +208,49 @@
                 </div>
               </div>
 
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="emporio">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/emporio-cover.jpg" alt="Conversa da assistente Lia confirmando a devolução de um pedido depois de consultar o sistema" class="w-full h-96 object-cover object-left-top group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">Agente de Atendimento com IA</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/python.svg" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/ia.svg" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="cbfv">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/cbfv-cover.jpg" alt="Central CBFV com o mosaico da rodada, os destaques da temporada e as notícias da liga" loading="lazy" class="w-full h-96 object-cover object-left-top group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">CBFV — Plataforma da Liga</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/csharp.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/blazor.png" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/postgres.svg" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="autopes">
+                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
+                  <img src="assets/autopes-cover.jpg" alt="Painel do Auto_PES21 com a rodada vinda do site, a fila de jogos e as ações de gravar, extrair e enviar" loading="lazy" class="w-full h-96 object-cover object-left-top group-hover:brightness-[0.4] transition" />
+                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
+                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">Auto_PES21 — Robô RPA</h3>
+                  </div>
+                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                    <img src="icons/python.svg" class="h-[50px] max-w-[60px] object-contain" />
+                    <img src="icons/js.png" class="h-[50px] max-w-[60px] object-contain" />
+                  </div>
+                </div>
+              </div>
+
               <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="bitbeak">
                 <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/bitbeak-cover.jpg" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
+                  <img src="assets/bitbeak-cover.jpg" loading="lazy" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
                   <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
                     <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">BitBeak</h3>
                   </div>
@@ -218,20 +258,6 @@
                     <img src="icons/csharp.png" class="h-[50px] max-w-[60px] object-contain" />
                     <img src="icons/netcore.png" class="h-[50px] max-w-[60px] object-contain" />
                     <img src="icons/react.png" class="h-[50px] max-w-[60px] object-contain" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full md:w-1/2 p-4 flex-shrink-0" data-id="cbfv">
-                <div class="relative group bg-[#222222] rounded-xl overflow-hidden cursor-pointer">
-                  <img src="assets/cbfv-cover.jpg" loading="lazy" class="w-full h-96 object-cover group-hover:brightness-[0.4] transition" />
-                  <div class="absolute bottom-0 left-0 w-full px-6 py-4 bg-[#222222]">
-                    <h3 class="text-lg font-bold bg-gradient-to-l from-[#CF7500] to-[#F0A500] text-transparent bg-clip-text uppercase">CBFV Draft - FC25</h3>
-                  </div>
-                  <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                    <img src="icons/csharp.png" class="h-[50px] max-w-[60px] object-contain" />
-                    <img src="icons/netcore.png" class="h-[50px] max-w-[60px] object-contain" />
-                    <img src="icons/blazor.png" class="h-[50px] max-w-[60px] object-contain" />
                   </div>
                 </div>
               </div>
@@ -417,7 +443,7 @@
       </div>
     </section>
 
-    <footer class="bg-[#141414] py-16">
+    <footer class="bg-[#141414] pt-16 pb-40 md:pb-16">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 id="contatoTitulo" class="text-2xl md:text-3xl font-bold text-[#D9D9D9] mb-10">ENTRE EM CONTATO</h2>
 
@@ -463,6 +489,20 @@
             <span class="text-xs sm:text-base group-hover:text-[#F0A500]">marcola20</span>
           </a>
 
+        </div>
+
+        <div class="mt-14 flex justify-center">
+          <div class="cnpj-selo inline-flex items-center gap-3 rounded-2xl pl-3 pr-5 py-3 text-left">
+            <span class="cnpj-icone w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 21V5a1 1 0 011-1h9a1 1 0 011 1v16M15 9h4a1 1 0 011 1v11M3 21h18M8 8h3M8 12h3M8 16h3"/>
+              </svg>
+            </span>
+            <span class="leading-snug">
+              <span id="cnpjTexto" class="block text-xs sm:text-sm text-[#F0A500] font-medium">Atendo como pessoa jurídica</span>
+              <span class="cnpj-numero block text-sm sm:text-base font-medium">CNPJ 58.540.677/0001-00</span>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
