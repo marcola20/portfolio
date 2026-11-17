@@ -469,17 +469,15 @@ const projetos = [
     ]
   },
   {
-    id: "jmh",
-    titulo_pt: "JMH Caçambas",
-    titulo_en: "JMH Caçambas",
-    data_pt: "16 de junho de 2025",
-    data_en: "June 16, 2025",
-    descricao_pt: "Site institucional desenvolvido para a empresa de aluguel de caçambas JMH, com o objetivo de modernizar sua presença digital. Participei de todo o processo — desde a pesquisa e prototipação até o desenvolvimento final. <br><br>O site foi construído com HTML, Tailwind CSS e JavaScript, garantindo um visual responsivo e moderno. Um dos destaques é a integração de um modelo 3D personalizado criado no Blender, trazendo um diferencial visual à apresentação dos serviços.",
-    descricao_en: "Institutional website developed for JMH, a dumpster rental company, aiming to modernize its digital presence. I was involved in the entire process — from research and prototyping to final development. <br><br>The site was built using HTML, Tailwind CSS, and JavaScript, ensuring a modern and responsive interface. A key highlight is the integration of a custom 3D model created in Blender, adding a unique visual element to the service presentation.",
-    video: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    id: "motive",
+    titulo_pt: "Motive Estética Automotiva",
+    titulo_en: "Motive Estética Automotiva",
+    data_pt: "17 de novembro de 2026",
+    data_en: "November 17, 2026",
+    descricao_pt: "Site institucional para a Motive Estética Automotiva, de Campina Grande do Sul (PR), com o objetivo de transformar visitas em agendamentos. Fiz todo o processo, do layout à publicação. <br><br>Construído com HTML, CSS e JavaScript puros, sem frameworks. O site apresenta os serviços e as duas formas de atendimento (no espaço próprio ou a domicílio), tem um comparador antes/depois que se arrasta com o dedo ou o mouse, uma galeria com lightbox e botões que levam direto ao WhatsApp para agendar. <br><br>Também cuidei de performance e SEO local: imagens em WebP com versões por tamanho de tela, carregamento sob demanda, fontes hospedadas no próprio site, dados estruturados (Schema.org), sitemap e prévia personalizada para compartilhamento.",
+    descricao_en: "Institutional website for Motive Estética Automotiva, a car detailing business in Campina Grande do Sul (Brazil), built to turn visits into bookings. I handled the whole process, from layout to launch. <br><br>Built with plain HTML, CSS, and JavaScript, no frameworks. The site presents the services and both service options (at the studio or at the customer's home), includes a draggable before/after comparison slider, a lightbox gallery, and buttons that go straight to WhatsApp for booking. <br><br>I also focused on performance and local SEO: WebP images with responsive sizes, lazy loading, self-hosted fonts, structured data (Schema.org), a sitemap, and a custom link preview for sharing.",
     botoes: [
-      { label_pt: "Site", label_en: "Site", url: "https://www.jmhengenharia.com.br/" },
-      { label_pt: "Figma", label_en: "Figma", url: "https://www.figma.com/proto/yoB88blJrnHpzuB2fGO9h0/JMH-Ca%C3%A7ambas?node-id=1-4&t=cU6ujcqQ4jieejy4-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4" }
+      { label_pt: "Site", label_en: "Site", url: "https://motiveestetica.netlify.app/" }
     ]
   },
   {
